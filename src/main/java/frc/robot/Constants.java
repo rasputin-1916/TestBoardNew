@@ -18,7 +18,7 @@ public final class Constants {
   }
 
   public static class MotorConstants {
-    public static final int motorSpeed = 0;
+    public static final int motorSpeed = 1;
     public static final int leftMotorID = 0;
     public static final int rightMotorID = 0;
 

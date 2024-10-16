@@ -36,7 +36,5 @@ public class leftMotor extends PIDSubsystem {
 
   public void set(double speed) {
     motor.set(speed);
-  }
-
-  public 
+  } 
 }

@@ -17,9 +17,10 @@ public class rightMotor extends PIDSubsystem {
   public rightMotor() {
     super(
         // The PIDController used by the subsystem
-        new PIDController(0, 0, 0));
+        new PIDController(Constants.MotorConstants.KP, Constants.MotorConstants.KI, Constants.MotorConstants.KD));
     
     motor = new TalonFX(Constants.MotorConstants.rightMotorID);
+    getController().setTolerance(Constants.MotorConstants.PIDTolerance);
   }
 
   @Override
@@ -35,5 +36,5 @@ public class rightMotor extends PIDSubsystem {
 
   public void set(double speed) {
     motor.set(speed);
-  }
+  } 
 }
