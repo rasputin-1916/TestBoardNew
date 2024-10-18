@@ -5,7 +5,6 @@
 package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.Autos;
 import frc.robot.commands.DriveLeftMotor;
 import frc.robot.commands.DriveRightMotor;
 import frc.robot.commands.RunMotors;
