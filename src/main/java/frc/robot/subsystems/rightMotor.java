@@ -19,7 +19,7 @@ public class rightMotor extends PIDSubsystem {
         // The PIDController used by the subsystem
         new PIDController(Constants.MotorConstants.KP, Constants.MotorConstants.KI, Constants.MotorConstants.KD));
     
-    motor = new TalonFX(Constants.MotorConstants.rightMotorID);
+    motor = new TalonFX(Constants.MotorConstants.rightMotorID, "CANivore");
     getController().setTolerance(Constants.MotorConstants.PIDTolerance);
   }
 

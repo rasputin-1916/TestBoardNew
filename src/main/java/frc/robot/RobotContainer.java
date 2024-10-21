@@ -52,14 +52,20 @@ public class RobotContainer {
   private void configureBindings() {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
 
+    m_LeftMotor.setDefaultCommand(new DriveLeftMotor(m_LeftMotor, () -> m_driverController.getRawAxis(leftY)));
+    m_RightMotor.setDefaultCommand(new DriveRightMotor(m_RightMotor, () -> m_driverController.getRawAxis(rightY)));
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
-    m_driverController.rightTrigger().whileTrue(new RunMotors(m_LeftMotor, m_RightMotor));
+   // m_driverController.rightTrigger().whileTrue(new RunMotors(m_LeftMotor, m_RightMotor));
 
-    m_driverController.leftStick().whileTrue(new DriveLeftMotor(m_LeftMotor, () -> m_driverController.getRawAxis(leftY)));
-    m_driverController.rightStick().whileTrue(new DriveRightMotor(m_RightMotor, () -> m_driverController.getRawAxis(rightY)));
+    //m_driverController.leftStick().whileTrue(new DriveLeftMotor(m_LeftMotor, () -> m_driverController.getRawAxis(leftY)));
+    //m_driverController.rightStick().whileTrue(new DriveRightMotor(m_RightMotor, () -> m_driverController.getRawAxis(rightY)));
   }
 
+
+  Command getAutonomousCommand(){
+    return null;
+  }
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *

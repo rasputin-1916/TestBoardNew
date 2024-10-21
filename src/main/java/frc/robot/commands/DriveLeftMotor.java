@@ -24,7 +24,6 @@ public class DriveLeftMotor extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    s_leftMotor.set(0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.

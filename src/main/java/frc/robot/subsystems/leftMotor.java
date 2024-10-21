@@ -19,7 +19,8 @@ public class leftMotor extends PIDSubsystem {
         // The PIDController used by the subsystem
         new PIDController(Constants.MotorConstants.KP, Constants.MotorConstants.KI, Constants.MotorConstants.KD));
     
-    motor = new TalonFX(Constants.MotorConstants.leftMotorID);
+    motor = new TalonFX(Constants.MotorConstants.leftMotorID, "CANivore");
+    //motor = new TalonFX(Constants.MotorConstants.leftMotorID);
     getController().setTolerance(Constants.MotorConstants.PIDTolerance);
   }
 
