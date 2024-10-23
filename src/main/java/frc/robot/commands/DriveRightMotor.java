@@ -19,6 +19,7 @@ public class DriveRightMotor extends Command {
     // Use addRequirements() here to declare subsystem dependencies.
     this.s_rightMotor = s_rightMotor;
     this.s_speed = s_speed;
+    addRequirements(this.s_rightMotor);
   }
 
   // Called when the command is initially scheduled.
